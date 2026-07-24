@@ -3,3 +3,5 @@
 ![Output Image](https://github.com/user-attachments/assets/dab8ef86-f01d-484c-8a32-b04013613ed5)
 # Objective 2
 ![Output Image](https://github.com/user-attachments/assets/9ccb7e77-4964-4e42-826f-3b8d1faef53a) 
+# objective 3
+![Output Image](https://github.com/user-attachments/assets/ef6292f3-acc5-4cdc-898e-5a959c5b3917)
