@@ -1,21 +1,22 @@
 clc;
 clear;
 close all;
-f = [900 3500 28000];  
-d = 2;                  
-PL = 32.44 + 20*log10(f) + 20*log10(d);
-figure;
-subplot(2,1,1);
-plot(f, PL, '-o', 'LineWidth', 2);
-title('Propagation Loss vs Operating Frequency');
-xlabel('Frequency (MHz)');
-ylabel('Propagation Loss (dB)');
-grid on;
-subplot(2,1,2);
-plot(1:3, PL, '-s', 'LineWidth', 2);
-title('Band-wise Propagation Loss Comparison');
-xlabel('Band Index (1=Sub-1GHz, 2=Mid-band, 3=mmWave)');
-ylabel('Propagation Loss (dB)');
-xticks([1 2 3]);
-xticklabels({'Sub-1GHz','Mid-band','mmWave'});
-grid on;
+freqValue = [900 3500 28000];
+linkDistance = 2;
+loss = 32.44 + 20*log10(linkDistance) + 20*log10(freqValue);
+figure
+subplot(2,1,1)
+plot(freqValue,loss,'-o','LineWidth',2)
+title('Propagation Loss vs Operating Frequency')
+xlabel('Frequency (MHz)')
+ylabel('Propagation Loss (dB)')
+grid on
+subplot(2,1,2)
+band = 1:length(freqValue);
+plot(band,loss,'-s','LineWidth',2)
+title('Band-wise Propagation Loss Comparison')
+xlabel('Band Index (1=Sub-1GHz, 2=Mid-band, 3=mmWave)')
+ylabel('Propagation Loss (dB)')
+set(gca,'XTick',band)
+set(gca,'XTickLabel',{'Sub-1GHz','Mid-band','mmWave'})
+grid on
