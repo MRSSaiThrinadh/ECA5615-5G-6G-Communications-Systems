@@ -1,15 +1,16 @@
-clc; 
+clc;
 clear;
-close all; 
-BW = 200;  
-Users = 3; 
-M = 2;  
-DataRate = BW*log2(M);  
-Rate = DataRate*ones(1,Users); 
-disp(' User Data Rate (kbps)') disp([(1:Users)' Rate']) 
-figure 
-bar(1:Users,Rate) 
-xlabel('Users') 
-ylabel('Data Rate (kbps)') 
-title('FDMA Data Rate for Each User') 
+close all;
+channelBW = 200;
+numUsers = 3;
+modOrder = 2;
+userRate = channelBW * log2(modOrder);
+dataRate = repmat(userRate,1,numUsers);
+disp('User Data Rate (kbps)')
+disp([(1:numUsers)' dataRate'])
+figure
+bar(1:numUsers,dataRate)
+xlabel('Users')
+ylabel('Data Rate (kbps)')
+title('FDMA Data Rate for Each User')
 grid on
