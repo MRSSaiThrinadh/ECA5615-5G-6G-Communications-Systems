@@ -1,0 +1,20 @@
+clc; 
+clear; 
+close all;
+speed = 20:20:120;
+PDR = [99 98 97 95 93 90]; 
+disp('Vehicle Speed (km/h)    Packet Delivery Ratio (%)') 
+disp([speed' PDR']) 
+figure 
+subplot(2,1,1) 
+plot(speed,PDR,'-o','LineWidth',2) 
+title('Vehicle Speed vs Packet Delivery Ratio') 
+xlabel('Vehicle Speed (km/h)') 
+ylabel('Packet Delivery Ratio (%)') 
+grid on 
+subplot(2,1,2) 
+plot(1:length(PDR),PDR,'-s','LineWidth',2) 
+title('Packet Delivery Ratio Across Vehicles') 
+xlabel('Vehicle Index') 
+ylabel('Packet Delivery Ratio (%)') 
+grid on
