@@ -1,0 +1,19 @@
+clc; 
+clear; 
+close all; 
+t = 1:10; 
+Accuracy = [90 91 92 93 94 95 96 97 98 99]; 
+Traffic = [45 50 55 60 65 70 75 80 85 90]; 
+figure 
+subplot(2,1,1) 
+plot(t,Accuracy,'-o','LineWidth',2) 
+title('AI Prediction Accuracy over Time') 
+xlabel('Time Interval') 
+ylabel('Prediction Accuracy (%)') 
+grid on 
+subplot(2,1,2) 
+bar(Traffic) 
+title('Network Traffic Samples Used for AI Prediction') 
+xlabel('Traffic Sample') 
+ylabel('Traffic (Mbps)') 
+grid on
